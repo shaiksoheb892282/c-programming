@@ -1,0 +1,221 @@
+1.Flight Status
+AirFlight business which is into aviation has a requirement to show the flight status when the user enquirers based on the flight number as input. 
+
+Write a program that receives flight number as input from the user. 
+
+Various flight number and their departure time is given as a dictionary .
+
+Write a method 'flightStatus' which receives the flight number and calculates the time left for departure (keep the method static). That is, from the current time, the time available for departure. For example, if the flight 'Ar456' is leaving at 18.00 and the current time is 10.00 the the time available is 08.00.
+
+This method MUST return  a message => Time To Flight 08:00:17.0918529
+
+If the current time is greater than the departure time then display 'Flight Already Left' message.
+
+Method to implement:
+
+public static string flightStatus(string flightNo)
+
+Sample Input 1:
+
+Enter the Flight Number :  ZW346
+
+Sample Output 1:
+
+Time To Flight 02:47:17.0918529
+
+Sample Input 2:
+
+Enter the Flight Number :  BR267
+
+Sample Output 2:
+
+Flight Already Left
+
+
+
+
+2.Age Calculation
+Famous Insurance company has a requirement to calculate the age of their customer based on the date of birth received as a string from the user.
+
+Write a program that receives the customer date of birth in the format (dd-mm-yyyy).
+
+Pass this value to a method, 'calculateAge' which returns the calculated age. Keep the method 'static'.
+
+Method to implement:
+
+public static int calculateAge(string dateOfBirth)
+
+ 
+
+Sample Input :
+
+Enter the date of birth (dd-mm-yyyy): 22-10-1984
+
+Sample Output:
+
+36
+
+
+
+3.Product Details
+Scenario
+
+Avenue Mart has purchased products for their company. The supplier has provided the details of the purchased products in the form of a csv file . The SoftTech wants to generate a report on the purchased product details. Given the product details in a csv file, write a program to display the product details from the file.
+
+ 
+
+Implementation
+
+Create Product class with the following member variables
+
+Data Type
+
+Variable Name
+
+string
+
+_productName
+
+string
+
+_serialNumber
+
+DateTime
+
+_purchaseDate
+
+double
+
+_purchaseCost
+
+ 
+
+Create 4 argument constructor with the following argument _productName, _serialNumber, _purchaseDate, _purchaseCost and override ToString() method. It must return product details in the specified format.
+
+Create Program class.
+
+Read the input file using StreamReader.
+
+Read the lines from the input file and create product object by parsing the input. Add all the product object to the ArrayList.
+
+Display all the objects in the array list in the specified format given below.
+
+Input and Output Format:
+
+The input file name must be "input.csv".
+
+The input file consists of a set of product details in comma separated format in the order Product name, Serial Number, Purchase Date, Purchase Cost.
+
+The Purchase date must be in (dd-mm-yyyy) format.
+
+Use String.Format("{0,-15}{1,-15}{2,-15}{3,-15}", "Product Name", "Serial Number", "Purchase Date", "Purchase Cost") to format the output.
+
+Sample Output:
+
+Product Name      Serial Number            Purchase Date        Purchase Cost
+
+HairTrimmer            HT123                     10-02-2017                    800
+
+Steel Box                 SB231                     11-04-2018                   250
+
+Rope                        RP240                     13-05-2019                   100
+
+
+
+
+
+4. Vehicles Released in Certain Years - Linq
+Write a program to find the vehicles released between certain year.
+1. class Vehicle is already given for your reference.
+2. class Program contains a hard-coded list with vehicle information in the 'VehicleList' attribute. 
+a) Implement method 'GetVehicleName'.
+public static void GetVehicleName(int fromYear, int toYear)          //method signature
+This method must display the vehicle names (from the given list) released between the fromYear and toYear (including these years).  USING LINQ CONCEPT
+b) Implement method 'Main'.
+Get the "fromYear" and "toYear" from the user. Pass it to 'GetVehicleName' method.
+NOTE : NEED NOT call 'GetMyExpression' method in Main.
+
+c) method 'GetMyExpression'
+public static Expression GetMyExpression(int fromYear, int toYear)  
+
+This method snippet is already given for you. THIS METHOD IS FOR TESTING YOUR LINQ QUERY EXPRESSION.  So fill your query expression in the space holder provided. ONLY THE QUERY EXPRESSION.  Nothing more need to be implemented in this method.
+Sample Input/Output 1:
+
+
+Sample Input/Output 2:
+
+
+
+
+5. Balls Bowled - Hands-On
+John want to create a program for calculating the number of balls bowled , if the user enter the number of  overs .
+Create a class PlayerBO with the method AddOversDetails and GetNoOfBallsBowled .
+Create a class Program and get the number of  overs from the user  and call the AddOversDetails
+PlayerBO method signature
+public void AddOversDetails(int oversBowled).
+public int GetNoOfBallsBowled()
+Implement the collection concepts for add overs
+Sample Input1 :
+Enter the number of overs
+50
+Sample Output1:
+Balls Bowled : 300
+ 
+Sample Input2 :
+Enter the number of overs
+25
+Sample Output2:
+Balls Bowled : 150
+
+
+6AddNewMember - Hands- On
+The LakeView Club have list of members under specific groups .
+Write a program that add new members in the group available.
+There are three groups 1- Gold  2- Silver 3- Platinum .
+Get the group input and member name from the user .
+Add the particular member to that specified group and display all the member under that group.
+Use the Collection concepts to implement .  
+Sample Input1 :
+Group Name :
+Silver
+Member Name:
+Rahul
+Sample Output1:
+Sam
+Peter
+Rahul
+ 
+Sample Input2 :
+Group Name :
+Gold
+Member Name:
+Helen
+Sample Output2:
+Tom
+Harry
+Helen
+
+
+7. Bank Information - FileWrite
+Loan Agency wants to get some account information from banks . They need data like account number , account holder name , bank name and balance . They will need this information in specified file format .
+Write a program to write the content to the file.
+In 'Main',
+Get the account number , account holder name , bank name and balance from the user. 
+Write these content to the file, output.csv in  comma seperated.
+
+Sample Input:
+Enter Account No : 234567
+Enter Account Holder Name : Peter
+Enter Bank Name : SBI
+Enter Bank Balance:40000
+
+Sample Output:
+Bank Information  written to file successfully.
+The file "output.csv" should contain the bank information
+234567,Peter,SBI,40000
+
+
+
+
+
+
